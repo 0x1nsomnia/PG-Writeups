@@ -84,13 +84,13 @@ https://github.com/jasperla/CVE-2020-11651-poc
 
 
 
-![curl-salt-resp.png](../_resources/curl-salt-resp-1.png)
+![curl-salt-resp.png](../_resources/curl-salt-resp.png)
 
 # PrivEsc
 
 
 
-![netstat.png](../_resources/netstat-1.png)
+![netstat.png](../_resources/netstat.png)
 
 ```
 [root@twiggy bin]# cat /etc/*-release
@@ -119,7 +119,7 @@ CentOS Linux release 7.8.2003 (Core)
 
 
 
-![setuid-mezz.png](../_resources/setuid-mezz-1.png)
+![setuid-mezz.png](../_resources/setuid-mezz.png)
 
 ```
 [root@twiggy helloworld]# strings dev.db | grep pass
