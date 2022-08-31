@@ -1,7 +1,5 @@
 # Recon
 
-We see port 22, 3000, and 9090.
-
 ## nmapAutomator.sh (Full)
 ```
 $ sudo ./nmapAutomator.sh -H algernon.pg -t Full -o full
