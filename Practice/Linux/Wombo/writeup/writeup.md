@@ -214,6 +214,6 @@ Admin access but dead end. No db's, no collections, etc (even on test and not ad
 
 ![e8cabdf67948c2f5c58b2b7bcdb1bdf4.png](../_resources/e8cabdf67948c2f5c58b2b7bcdb1bdf4.png)
 
-I spent a long time trying manual exploitation without luck. I'll say that even with Metasploit, this box was a b****...
+I spent a long time trying manual exploitation without luck. I'll say that even with Metasploit, this box was frustrating...
 
 ![81318b1393ffad69df8f37018d1c9d52.png](../_resources/81318b1393ffad69df8f37018d1c9d52.png)
