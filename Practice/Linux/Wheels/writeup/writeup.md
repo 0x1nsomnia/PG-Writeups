@@ -134,3 +134,5 @@ https://xcat.readthedocs.io/
 ![87330c64d1239848a65df039a9a86e8f.png](../_resources/87330c64d1239848a65df039a9a86e8f.png)
 
 ![df51f3854666b4c7b96be5f7979d1b0c.png](../_resources/df51f3854666b4c7b96be5f7979d1b0c.png)
+
+TODO: Study up on BO's
